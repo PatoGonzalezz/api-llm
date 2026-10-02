@@ -117,6 +117,7 @@ def home():
 
 
 @app.post("/predict")
+@app.post("/predict/")
 def predecir(datos: DatosAtleta):
     if modelo is None:
         raise HTTPException(status_code=500, detail="El modelo no está disponible.")
